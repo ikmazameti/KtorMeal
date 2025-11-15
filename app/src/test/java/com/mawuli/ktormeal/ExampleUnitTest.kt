@@ -1,4 +1,4 @@
-package com.mawuli.networkcall
+package com.mawuli.ktormeal
 
 import org.junit.Test
 

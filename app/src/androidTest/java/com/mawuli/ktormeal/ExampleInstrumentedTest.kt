@@ -1,4 +1,4 @@
-package com.mawuli.networkcall
+package com.mawuli.ktormeal
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.mawuli.networkcall", appContext.packageName)
+        assertEquals("com.mawuli.ktormeal", appContext.packageName)
     }
 }

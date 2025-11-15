@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Network Call"
+rootProject.name = "Ktor Meal"
 include(":app")
  

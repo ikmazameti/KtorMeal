@@ -1,17 +1,22 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+
+    id("org.jetbrains.kotlin.plugin.serialization") version "2.2.21"
+
 }
 
 android {
-    namespace = "com.mawuli.networkcall"
+    namespace = "com.mawuli.ktormeal"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.mawuli.networkcall"
+        applicationId = "com.mawuli.ktormeal"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -33,8 +38,11 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlinOptions {
-        jvmTarget = "11"
+
+    kotlin {
+        compilerOptions {
+            jvmTarget = JvmTarget.JVM_11
+        }
     }
     buildFeatures {
         compose = true
@@ -57,4 +65,27 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+
+
+    implementation(platform("io.ktor:ktor-bom:3.3.2"))
+
+    implementation("io.ktor:ktor-client-core")
+
+    implementation("io.ktor:ktor-client-cio")
+
+    implementation("io.ktor:ktor-client-content-negotiation")
+
+    implementation("io.ktor:ktor-serialization-kotlinx-json")
+
+    implementation("io.ktor:ktor-client-logging")
+
+
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.9.4")
+
+    implementation("io.coil-kt.coil3:coil-compose:3.3.0")
+
+    implementation("io.coil-kt.coil3:coil-network-okhttp:3.3.0")
+
+
+
 }

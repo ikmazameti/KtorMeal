@@ -1,4 +1,4 @@
-package com.mawuli.networkcall.ui.theme
+package com.mawuli.ktormeal.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
